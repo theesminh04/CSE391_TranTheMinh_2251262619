@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html lang="vi"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Chi tiết sản phẩm</title> 
+    <style> 
+        body { font-family: Arial; margin: 0; }
+        header, nav, main, aside, footer { padding: 10px; border: 1px solid #ccc; margin: 5px; }
+        .container { display: flex; }
+        .main-content { flex: 3; }
+        aside { flex: 1; }
+        .product-images { display: flex; }
+        .thumbnails { display: flex; flex-direction: column; }
+        .thumbnails img { width: 50px; margin: 2px; }
+        .main-image img { width: 200px; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #999; }
+        .similarItem { width: 10%; height: 10%; }
+    </style>
+</head>
+<body> 
+
+<header> 
+    <h1>Logo / Shop</h1> 
+</header>
+
+<nav aria-label="breadcrumb"> 
+    <p>Trang chủ &gt; Điện thoại &gt; iPhone 16</p> 
+</nav>
+
+<div class="container"> 
+
+    <main class="main-content"> 
+
+        <section class="product-images"> 
+            <div class="thumbnails"> 
+                <img src="./testpictures/ip15.jpg" alt="thumb1"> 
+                <img src="./testpictures/ip15prm.png" alt="thumb2"> 
+                <img src="./testpictures/ip17air.jpg" alt="thumb3"> 
+                <img src="./testpictures/ip17.jpg" alt="thumb4"> 
+            </div>
+            <div class="main-image"> 
+                <img src="./testpictures/ip17trang.jpeg" alt="main"> <
+            </div>
+        </section>
+
+        <section> 
+            <h2>Tên sản phẩm</h2> 
+            <p>Giá tiền</p> 
+            <p>★★★★★</p> 
+            <p>Mô tả ngắn</p> 
+        </section>
+
+        <section> 
+            <h3>Thông số kỹ thuật</h3> 
+            <table> 
+                <tr> 
+                    <th>Thông số</th> 
+                    <th>Giá trị</th> 
+                </tr>
+                <tr>
+                    <td>CPU</td> 
+                    <td>Placeholder</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>Placeholder</td>
+                </tr>
+                <tr>
+                    <td>Pin</td>
+                    <td>Placeholder</td>
+                </tr>
+            </table>
+        </section>
+
+        <section> >
+            <h3>Đánh giá / Bình luận</h3> 
+            <article> 
+                <p>Người dùng A: Bình luận...</p> 
+            </article>
+            <article>
+                <p>Người dùng B: Bình luận...</p>
+            </article>
+        </section>
+
+    </main>
+
+    <aside> 
+        <h3>Sản phẩm tương tự</h3> 
+        <div> 
+            <img class="similarItem" src="./testpictures/ip15.jpg" alt="sp1"> 
+            <p>Tên sản phẩm</p> 
+        </div>
+        <div>
+            <img class="similarItem" src="./testpictures/ip17.jpg" alt="sp2">
+            <p>Tên sản phẩm</p>
+        </div>
+        <div>
+            <img class="similarItem" src="./testpictures/ip17air.jpg" alt="sp3">
+            <p>Tên sản phẩm</p>
+        </div>
+    </aside>
+
+</div>
+
+<footer> 
+    <p>Thông tin liên hệ / Footer</p> 
+</footer>
+
+</body>
+</html>

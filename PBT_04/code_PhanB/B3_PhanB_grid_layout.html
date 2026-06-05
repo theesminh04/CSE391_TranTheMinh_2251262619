@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang E-Commerce - Grid Layout</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+
+    <!-- GRID LAYOUT START -->
+    
+    <!-- HEADER (full width) -->
+    <header class="main-grid header">
+        <div class="logo">🛍️ Shop</div>
+        <nav class="main-nav">
+            <a href="#">Trang Chủ</a>
+            <a href="#">Sản Phẩm</a>
+            <a href="#">Giới Thiệu</a>
+            <a href="#">Liên Hệ</a>
+        </nav>
+        <div class="search-cart">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <!-- HERO BANNER (full width) -->
+    <section class="main-grid hero">
+        <div class="hero-content">
+            <h1>🔥 GIẢM GIÁ SẬP HỐC 🔥</h1>
+            <p>Lên tới 70% cho tất cả sản phẩm</p>
+            <a href="#" class="btn">Xem Ngay</a>
+        </div>
+        <!-- CARD NỔI BẬT (span 2 column) -->
+        <div class="hero-highlight">
+            <img src="pic/sale.jpg" alt="Flash Sale Banner">
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="main-grid main-content">
+        
+        <!-- SIDEBAR (200px) -->
+        <aside class="main-grid sidebar">
+            <h3>Bộ Lọc</h3>
+            
+            <div class="filter-group">
+                <h4>Danh Mục</h4>
+                <label><input type="checkbox"> Quần Áo</label>
+                <label><input type="checkbox"> Giày dép</label>
+                <label><input type="checkbox"> Phụ kiện</label>
+                <label><input type="checkbox"> Gia dụng</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Giá</h4>
+                <label><input type="checkbox"> Dưới 100K</label>
+                <label><input type="checkbox"> 100K - 500K</label>
+                <label><input type="checkbox"> Trên 500K</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Loại</h4>
+                <label><input type="checkbox"> Mới</label>
+                <label><input type="checkbox"> Giảm giá</label>
+                <label><input type="checkbox"> Hot</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Rating</h4>
+                <label><input type="checkbox"> ⭐⭐⭐⭐⭐</label>
+                <label><input type="checkbox"> ⭐⭐⭐⭐</label>
+                <label><input type="checkbox"> ⭐⭐⭐</label>
+            </div>
+        </aside>
+
+        <!-- MAIN PRODUCTS GRID (3 columns) -->
+        <main class="main-grid products-area">
+            <!-- Product Cards -->
+            
+            <!-- Card 1 -->
+            <article class="product-card">
+                <img src="pic/tui.jpg" alt="Product 1">
+                <div class="card-content">
+                    <h3>Túi Xách Da</h3>
+                    <p class="price">350.000đ</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <button class="add-btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="product-card">
+                <img src="pic/tui.jpg" alt="Product 2">
+                <div class="card-content">
+                    <h3>Giày Thể Thao</h3>
+                    <p class="price">450.000đ</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+                    <button class="add-btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="product-card">
+                <img src="pic/tui.jpg" alt="Product 3">
+                <div class="card-content">
+                    <h3>Đồng Hồ Nam</h3>
+                    <p class="price">1.200.000đ</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                    <button class="add-btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="product-card">
+                <img src="pic/tui.jpg" alt="Product 4">
+                <div class="card-content">
+                    <h3>Áo Khoác</h3>
+                    <p class="price">280.000đ</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+                    <button class="add-btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="product-card">
+                <img src="pic/tui.jpg" alt="Product 5">
+                <div class="card-content">
+                    <h3>Quần Jean</h3>
+                    <p class="price">320.000đ</p>
+                    <div class="rating">⭐⭐⭐⭐ (4.5)</div>
+                    <button class="add-btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="product-card">
+                <img src="pic/tui.jpg" alt="Product 6">
+                <div class="card-content">
+                    <h3>Áo Khoác Da</h3>
+                    <p class="price">650.000đ</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                    <button class="add-btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+        </main>
+
+        <!-- ADS (200px) -->
+        <aside class="main-grid ads">
+            <div class="ad-banner">
+                <img src="pic/anh.png" alt="Advertisement">
+            </div>
+            <div class="ad-banner">
+                <img src="pic/anh.png" alt="Advertisement">
+            </div>
+        </aside>
+    </div>
+
+    <!-- FOOTER (full width) -->
+    <footer class="main-grid footer">
+        <div class="footer-section">
+            <h3>Về Chúng Tôi</h3>
+            <p>Chào mừng đến với ShopName - Điểm đến của những món đồ tuyệt vời!</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liên Kết</h3>
+            <ul>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Chính Sách</a></li>
+                <li><a href="#">Điều Khoản</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Liên Hệ</h3>
+            <p>📞 Hotline: 1900xxx</p>
+            <p>📧 Email: support@shopname.vn</p>
+        </div>
+        <div class="footer-section">
+            <h3>Theo Dõi</h3>
+            <p>Facebook | Instagram | YouTube</p>
+        </div>
+    </footer>
+</body>
+</html>

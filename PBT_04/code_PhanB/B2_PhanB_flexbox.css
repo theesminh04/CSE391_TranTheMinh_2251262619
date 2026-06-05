@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Navbar Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Menu Items (giữa) */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-item {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-item:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Buttons (phải) */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #e67e22;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #d35400;
+    text-decoration: underline;
+}
+
+.register-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.register-btn:hover {
+    background-color: #1e8449;
+    text-decoration: underline;
+}
+
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+    width: calc(25% - 20px); /* 4 cột */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 430px;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+/* Card Info (Giữa) */
+.card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 18px 18px 14px;
+    text-align: center;
+}
+
+.card-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.price {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Buy Button (Luôn dính đáy) */
+.buy-btn {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Dính đáy */
+}
+
+.buy-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(100% - 20px); 
+    }
+    
+    .nav-menu {
+        display: none; 
+    }
+}

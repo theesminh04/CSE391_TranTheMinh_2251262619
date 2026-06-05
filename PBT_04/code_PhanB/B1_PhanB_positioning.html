@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo CSS Positioning</title>
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body>
+
+    <header class="fixed-header">
+        <div class="container header-content">
+            <div class="logo">MY LOGO</div>
+            <nav class="nav-links">
+                <a href="#">Trang chủ</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <aside class="sticky-sidebar">
+            <h3>Danh mục</h3>
+            <ul>
+                <li>📱 Điện thoại</li>
+                <li>💊 Máy tính bảng</li>
+                <li>💻 Laptop</li>
+                <li>🎧 Phụ kiện</li>
+            </ul>
+            <p style="margin-top: 20px; font-size: 0.85em; color: #888;">
+            </p>
+        </aside>
+
+        <main class="content">
+            <h2>Danh sách sản phẩm</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div class="badge-hot">HOT</div>
+                    <div class="product-img"></div>
+                    <h4>iPhone 15 Pro Max</h4>
+                    <p class="price">29.990.000đ</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="badge-hot">HOT</div>
+                    <div class="product-img"></div>
+                    <h4>MacBook Pro M3</h4>
+                    <p class="price">39.990.000đ</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"></div>
+                    <h4>AirPods Pro 2</h4>
+                    <p class="price">5.990.000đ</p>
+                </div>
+
+            </div>
+
+            <div class="dummy-content">
+                <h3 style="margin-top: 50px;">Khu vực cuộn trang</h3>
+            </div>
+        </main>
+    </div>
+
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </button>
+
+</body>
+</html>

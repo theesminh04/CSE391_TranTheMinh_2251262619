@@ -21,3 +21,6 @@
 | PBT_08        | Functions, Scope, Arrays, Objects       | Chưa hoàn thành |
 | PBT_09        | DOM Manipulation, Events       | Chưa hoàn thành |
 | PBT_10        | Async/Await, Fetch API, CRUDv       | Chưa hoàn thành |
+
+- PBT_01: HTML5 cau truc, Semantic, Tables, Links
+- PBT_02: Forms, Validation, Media, Accessibility

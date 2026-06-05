@@ -14,8 +14,8 @@
 | PBT_01        | HTML5 cấu trúc, Semantic, Tables, Links      | Hoàn thành|
 | PBT_02        | Forms, Validation, Media, Accessibility     | Hoàn thành |
 | PBT_03 | Selectors, Box Model, Inheritance, Cascade | Hoàn thành |
-| PBT_04        | Positioning, Flexbox, Grid      | Chưa hoàn thành |
-| PBT_05        | Responsive Design, Media Queries, SCSS      | Chưa hoàn thành |
+| PBT_04        | Positioning, Flexbox, Grid      | Hoàn thành |
+| PBT_05 | Responsive Design, Media Queries, SCSS | Hoàn thành |
 | PBT_06        | Bootstrap / TailwindCSSBootstrap / TailwindCSSv      | Chưa hoàn thành |
 | PBT_07        | Variables, Data Types, Control Structures       | Chưa hoàn thành |
 | PBT_08        | Functions, Scope, Arrays, Objects       | Chưa hoàn thành |

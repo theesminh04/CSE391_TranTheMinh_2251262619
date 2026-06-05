@@ -20,9 +20,4 @@
 | PBT_07        | Variables, Data Types, Control Structures       | Hoàn thành |
 | PBT_08        | Functions, Scope, Arrays, Objects       | Hoàn thành |
 | PBT_09        | DOM Manipulation, Events       | Hoàn thành |
-| PBT_10        | Async/Await, Fetch API, CRUDv       | Chưa hoàn thành |
-
-
-<!-- readme -->
-
-<!-- update readme description -->
+| PBT_10        | Async/Await, Fetch API, CRUDv       | Hoàn thành |

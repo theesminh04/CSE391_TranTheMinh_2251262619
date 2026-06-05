@@ -11,8 +11,8 @@
 
 | Phiếu bài tập | Nội dung               | Trạng thái      |
 | ------------- | ---------------------- | --------------- |
-| PBT_01        | HTML5 cấu trúc, Semantic, Tables, Links      | Hoàn thành      |
-| PBT_02        | Forms, Validation, Media, Accessibility     | Chưa hoàn thành |
+| PBT_01        | HTML5 cấu trúc, Semantic, Tables, Links      | Hoàn thành|
+| PBT_02        | Forms, Validation, Media, Accessibility     | Hoàn thành |
 | PBT_03        | Selectors, Box Model, Inheritance, Cascade       | Chưa hoàn thành |
 | PBT_04        | Positioning, Flexbox, Grid      | Chưa hoàn thành |
 | PBT_05        | Responsive Design, Media Queries, SCSS      | Chưa hoàn thành |

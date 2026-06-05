@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory CRUD</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Directory</h1>
+
+        <form id="userForm" class="form">
+            <input type="hidden" id="userId">
+
+            <div class="form-group">
+                <label for="name">Tên</label>
+                <input type="text" id="name" placeholder="Nhập tên user">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Nhập email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="text" id="phone" placeholder="Nhập số điện thoại">
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" id="submitBtn">Thêm User</button>
+                <button type="button" id="cancelBtn" class="secondary hidden">Hủy</button>
+            </div>
+        </form>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm theo name hoặc email...">
+        </div>
+
+        <div id="toast" class="toast hidden"></div>
+
+        <div id="loading" class="skeleton-wrapper hidden">
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+            <div class="skeleton"></div>
+        </div>
+
+        <div id="userList" class="user-list"></div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

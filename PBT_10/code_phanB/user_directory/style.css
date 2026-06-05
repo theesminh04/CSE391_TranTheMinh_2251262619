@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f4f6fb;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input,
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd2e0;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #4f6ef7;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button.secondary {
+    background: #777;
+}
+
+button.edit {
+    background: #f39c12;
+}
+
+button.delete {
+    background: #e74c3c;
+}
+
+button.detail {
+    background: #2ecc71;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.user-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.user-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.user-card p {
+    margin: 6px 0;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.toast {
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.toast.success {
+    background: #2ecc71;
+}
+
+.toast.error {
+    background: #e74c3c;
+}
+
+.skeleton-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.skeleton {
+    height: 150px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #e0e0e0, #f5f5f5, #e0e0e0);
+    background-size: 200% 100%;
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    from {
+        background-position: 200% 0;
+    }
+
+    to {
+        background-position: -200% 0;
+    }
+}

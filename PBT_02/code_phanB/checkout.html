@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Đặt Hàng - Công Nghệ Tương Lai</title>
+    <link rel="stylesheet" href="css\checkout.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <svg width="35" height="35" viewBox="0 0 100 100">
+                <rect x="10" y="10" width="80" height="80" rx="15" fill="#007bff" />
+                <circle cx="50" cy="50" r="25" fill="white" />
+            </svg>
+            <h1>Công Nghệ Tương Lai</h1>
+        </div>
+
+        <div class="header-status">
+            <div class="status-info">
+                <span>Điểm tích lũy: <strong>750/1000</strong></span>
+                <span class="rank">Hạng Vàng</span>
+            </div>
+            <progress value="750" max="1000"></progress>
+        </div>
+    </header>
+
+    <main>
+        <form id="checkout-form">
+            
+            <div class="split-grid">
+                <div class="card">
+                    <h2>Thêm sản phẩm</h2>
+                    <div class="form-group">
+                        <label>Tên sản phẩm:</label>
+                        <input type="search" id="product-search" list="products-list" placeholder="Gõ để tìm nhanh...">
+                        <datalist id="products-list">
+                            <option value="iPhone 15 Pro Max">
+                            <option value="MacBook Pro M3">
+                            <option value="AirPods Pro 2">
+                            <option value="Apple Watch Ultra">
+                        </datalist>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Số lượng:</label>
+                        <div class="quantity-control">
+                            <button type="button" onclick="stepQty(-1)">-</button>
+                            <input type="number" id="add-quantity" value="1" readonly>
+                            <button type="button" onclick="stepQty(1)">+</button>
+                        </div>
+                    </div>
+
+                    <div id="price-preview-box" class="price-preview">
+                        <div class="preview-row"><span>Đơn giá:</span> <span id="preview-unit">0đ</span></div>
+                        <div class="preview-row total"><span>Tạm tính:</span> <span id="preview-total">0đ</span></div>
+                    </div>
+
+                    <button type="button" id="add-to-cart-btn" class="btn-add">Thêm vào giỏ +</button>
+                </div>
+
+                <div class="card">
+                    <h2>1. Chi tiết giỏ hàng</h2>
+                    <table class="cart-table" id="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>SL</th>
+                                <th>Thành tiền</th>
+                                <th>Xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2" style="text-align: right; font-weight: bold;">Tổng cộng:</td>
+                                <td id="total-price-cell" style="color: #d63031; font-weight: bold;">0đ</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <div class="split-grid">
+                <fieldset class="card">
+                    <legend>2. Thanh toán & Ưu đãi</legend>
+                    <div class="form-group">
+                        <label>Phương thức thanh toán:</label>
+                        <div class="radio-group">
+                            <label class="radio-item">
+                                <input type="radio" name="payment" value="COD" checked> 
+                                <span>COD</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="payment" value="Bank"> 
+                                <span>Chuyển khoản</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="payment" value="E-wallet"> 
+                                <span>Ví điện tử</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mã giảm giá:</label>
+                        <input type="text" id="coupon" placeholder="VD: SALE2026">
+                    </div>
+                    <div class="form-group">
+                        <label>Ghi chú:</label>
+                        <textarea id="notes" rows="2" placeholder="Ghi chú..."></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset class="card">
+                    <legend>3. Thông tin giao hàng</legend>
+                    <div class="form-group">
+                        <label>Ngày giao mong muốn:</label>
+                        <input type="date" id="delivery-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Khung giờ giao:</label>
+                        <select>
+                            <option>Sáng 8-12h</option>
+                            <option>Chiều 14-18h</option>
+                            <option>Tối 18-21h</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Giao hàng nhanh: <span id="days-val">4</span> ngày</label>
+                        <input type="range" id="shipping-speed" min="1" max="7" value="4">
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="btn-group">
+                <button type="reset" class="btn-reset">Hủy đơn hàng</button>
+                <button type="submit" class="btn-submit">Xác nhận đặt hàng</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="script\checkout.js"></script>
+</body>
+</html>

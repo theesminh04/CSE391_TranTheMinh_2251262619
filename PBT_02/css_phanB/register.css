@@ -1,0 +1,152 @@
+
+body { 
+    font-family: 'Segoe UI', Tahoma, sans-serif; 
+    background: #f0f2f5; 
+    padding: 40px 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0; 
+}
+
+h2 { 
+    color: #333; 
+    margin-bottom: 30px; 
+}
+
+#success-box { 
+    display: none; 
+    background: #d4edda; 
+    color: #155724; 
+    padding: 20px; 
+    border-radius: 10px; 
+    border: 1px solid #c3e6cb; 
+    margin-bottom: 20px; 
+    width: 100%; 
+    max-width: 900px; 
+    text-align: center; 
+    font-weight: bold; 
+}
+
+/* CẤU TRÚC FORM */
+form { 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05); 
+    max-width: 950px; 
+    width: 100%; 
+}
+
+.fieldset-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+}
+
+fieldset { 
+    border: 2px solid #eee; 
+    border-radius: 12px; 
+    padding: 20px; 
+    margin-bottom: 10px; 
+}
+
+legend { 
+    font-weight: bold; 
+    padding: 0 10px; 
+    color: #007bff; 
+    text-transform: uppercase; 
+    font-size: 14px; 
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+label { 
+    display: block; 
+    font-weight: 600; 
+    margin-bottom: 8px; 
+    font-size: 14px; 
+}
+
+input, select, textarea { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    font-size: 14px; 
+    transition: 0.3s; 
+}
+
+input:focus { 
+    border-color: #007bff; 
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0,123,255,0.2); 
+}
+
+/* RADIO BUTTONS */
+.radio-group { 
+    display: flex; 
+    gap: 15px; 
+    padding: 10px 0; 
+}
+
+.radio-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+}
+
+.radio-item input { 
+    width: auto; 
+}
+
+input.mismatch { 
+    border-color: #dc3545; 
+    background: #fff8f8; 
+}
+
+.error-hint { 
+    color: #dc3545; 
+    font-size: 12px; 
+    display: none; 
+    margin-top: 5px; 
+    font-weight: bold; 
+}
+
+input.mismatch + .error-hint { 
+    display: block; 
+}
+
+.btn-group { 
+    display: flex; 
+    gap: 15px; 
+    margin-top: 25px; 
+}
+
+button { 
+    flex: 1; 
+    padding: 15px; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    color: white; 
+    font-size: 16px; 
+}
+
+button[type="submit"] { 
+    background: #28a745; 
+}
+
+button[type="reset"] { 
+    background: #6c757d; 
+}
+
+button:hover { 
+    opacity: 0.9; 
+    transform: translateY(-2px); 
+}

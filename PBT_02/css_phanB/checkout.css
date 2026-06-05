@@ -1,0 +1,84 @@
+/* RESET & CHUNG */
+* { box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f1f3f6; color: #2d3436; }
+main { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
+
+/* HEADER */
+header {
+    background: #fff; padding: 10px 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky; top: 0; z-index: 100;
+}
+.logo-area { display: flex; align-items: center; gap: 10px; }
+.logo-area h1 { color: #007bff; font-size: 20px; margin: 0; }
+
+.header-status { width: 220px; display: flex; flex-direction: column; gap: 4px; }
+.status-info { display: flex; justify-content: space-between; font-size: 11px; }
+.rank { background: #fff9db; color: #f59f00; padding: 1px 6px; border-radius: 10px; font-size: 9px; font-weight: bold; border: 1px solid #ffe066; }
+
+header progress { width: 100%; height: 7px; appearance: none; -webkit-appearance: none; }
+header progress::-webkit-progress-bar { background-color: #dfe6e9; border-radius: 10px; }
+header progress::-webkit-progress-value { background: linear-gradient(to right, #00b894, #55efc4); border-radius: 10px; }
+
+/* GRID HỆ THỐNG (2 CỘT) */
+.split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card { background: #fff; padding: 20px; border-radius: 12px; height: 100%; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+h2, legend { color: #007bff; font-size: 1.1rem; font-weight: bold; margin-bottom: 15px; border: none; }
+
+/* FORM ELEMENTS */
+.form-group { margin-bottom: 15px; }
+label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.9rem; }
+input, select, textarea { width: 100%; padding: 10px; border: 1px solid #dfe6e9; border-radius: 8px; font-size: 0.9rem; }
+
+/* QUANTITY +/- */
+.quantity-control { display: flex; border: 1px solid #dfe6e9; border-radius: 8px; width: fit-content; overflow: hidden; }
+.quantity-control button { width: 35px; height: 35px; border: none; background: #f8f9fa; cursor: pointer; color: #007bff; font-weight: bold; }
+.quantity-control input { width: 45px !important; text-align: center; border: none !important; padding: 0 !important; font-weight: bold; }
+
+/* GIÁ XEM TRƯỚC */
+.price-preview { background: #f0f7ff; padding: 12px; border-radius: 8px; border-left: 4px solid #007bff; margin-bottom: 15px; display: none; }
+.preview-row { display: flex; justify-content: space-between; font-size: 0.85rem; }
+.preview-row.total { color: #d63031; font-weight: bold; margin-top: 5px; border-top: 1px dashed #ccc; padding-top: 5px; }
+
+/* BẢNG GIỎ HÀNG (Tối ưu nhỏ gọn cho 2 cột) */
+.cart-table { width: 100%; border-collapse: collapse; }
+.cart-table th, .cart-table td { padding: 10px 5px; border-bottom: 1px solid #f1f3f6; text-align: left; font-size: 0.85rem; }
+.cart-table th { color: #636e72; background: #f8f9fa; }
+
+/* NÚT BẤM */
+.btn-add { background: #00b894; color: #fff; border: none; padding: 10px; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; }
+.btn-remove { background: #ff7675; color: #fff; border: none; padding: 3px 7px; border-radius: 5px; cursor: pointer; }
+
+.btn-group { display: flex; gap: 15px; max-width: 500px; margin: 10px auto; }
+.btn-reset, .btn-submit { flex: 1; padding: 12px; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; }
+.btn-reset { background: #dfe6e9; color: #636e72; }
+.btn-submit { background: #007bff; color: #fff; }
+
+@media (max-width: 850px) { .split-grid { grid-template-columns: 1fr; } }
+
+.radio-group {
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.radio-item {
+    display: flex;         
+    align-items: center;   
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.radio-item input[type="radio"] {
+    width: auto !important; 
+    margin: 0;
+    cursor: pointer;
+}

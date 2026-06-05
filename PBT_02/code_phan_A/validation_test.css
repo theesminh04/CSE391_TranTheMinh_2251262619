@@ -1,0 +1,100 @@
+
+body { 
+    font: 16px 'Segoe UI', sans-serif; 
+    background: #f0f2f5; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 40px 20px; 
+    margin: 0; 
+}
+
+.flex-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 25px; 
+    max-width: 1200px; 
+    width: 100%; 
+}
+
+form { 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    flex: 0 1 350px; /* Tự động chia 3 ô/hàng, 2 ô dưới sẽ vào giữa */
+    display: flex; 
+    flex-direction: column; 
+    border-top: 8px solid #007bff; 
+    box-sizing: border-box; 
+}
+
+form:nth-child(2) { border-top-color: #28a745; }
+form:nth-child(3) { border-top-color: #ffc107; }
+form:nth-child(4) { border-top-color: #dc3545; }
+form:nth-child(5) { border-top-color: #6f42c1; }
+
+h4 { margin: 0 0 10px; font-size: 18px; text-transform: uppercase; }
+p { font-size: 14px; color: #666; margin-bottom: 20px; height: 40px; line-height: 1.4; }
+
+input, button { 
+    width: 100%; 
+    border-radius: 8px; 
+    font: inherit; 
+    box-sizing: border-box; 
+    transition: .3s; 
+}
+
+input { 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    border: 2px solid #eee; 
+}
+
+input:focus { 
+    border-color: #007bff; 
+    outline: none; 
+    background: #fafafa; 
+}
+
+button { 
+    background: #333; 
+    color: #fff; 
+    border: none; 
+    padding: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+button:hover { 
+    background: #000; 
+    transform: scale(1.02); 
+}
+
+body { font: 16px 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; margin: 0; }
+
+.flex-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1200px; width: 100%; }
+
+form { 
+    background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    flex: 0 1 350px; display: flex; flex-direction: column; border-top: 8px solid #007bff; box-sizing: border-box; 
+}
+
+form:nth-child(2) { border-top-color: #28a745; }
+form:nth-child(3) { border-top-color: #ffc107; }
+form:nth-child(4) { border-top-color: #dc3545; }
+form:nth-child(5) { border-top-color: #6f42c1; }
+
+h4 { margin: 0 0 10px; font-size: 18px; }
+p { font-size: 14px; color: #666; margin-bottom: 20px; height: 40px; }
+
+input, button { width: 100%; border-radius: 8px; font: inherit; box-sizing: border-box; transition: .3s; }
+input { padding: 12px; margin-bottom: 5px; border: 2px solid #eee; }
+
+.error-msg { color: #dc3545; font-size: 13px; margin-bottom: 15px; display: none; font-weight: 500; }
+input.is-invalid { border-color: #dc3545; background: #fff8f8; }
+input.is-invalid + .error-msg { display: block; } /* Hiện lỗi khi input có class is-invalid */
+
+button { background: #333; color: #fff; border: none; padding: 14px; font-weight: bold; cursor: pointer; margin-top: auto; }
+button:hover { background: #000; transform: scale(1.02); }

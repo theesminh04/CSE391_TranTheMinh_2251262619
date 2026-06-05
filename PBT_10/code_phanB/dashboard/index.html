@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-API Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div>
+                <h1>Multi-API Dashboard</h1>
+                <p>Dashboard tổng hợp dữ liệu từ nhiều API khác nhau</p>
+            </div>
+
+            <button id="refreshBtn">Refresh All</button>
+        </header>
+
+        <div id="globalLoading" class="global-loading hidden">
+            <div class="spinner"></div>
+            <span>Đang tải tất cả dữ liệu...</span>
+        </div>
+
+        <p id="fetchTime" class="fetch-time">Chưa tải dữ liệu.</p>
+
+        <main class="dashboard">
+            <section class="widget">
+                <h2>Users API</h2>
+                <p class="api-url">JSONPlaceholder</p>
+                <div id="usersWidget" class="widget-body"></div>
+            </section>
+
+            <section class="widget">
+                <h2>Weather API</h2>
+                <p class="api-url">Open-Meteo - Hanoi</p>
+                <div id="weatherWidget" class="widget-body"></div>
+            </section>
+
+            <section class="widget">
+                <h2>Country API</h2>
+                <p class="api-url">REST Countries - Vietnam</p>
+                <div id="countryWidget" class="widget-body"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

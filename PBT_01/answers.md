@@ -91,9 +91,7 @@ Trình duyệt phải đọc toàn bộ table trước khi vẽ bất kỳ ô n�
 
 # Câu C2 (10đ) — So sánh & Tranh luận
 - Một đồng nghiệp nói: "Dùng ```<div>``` cho mọi thứ rồi thêm class là được, không cần semantic HTML. Tốn thời gian học thêm thẻ mới."
-
 - Viết 1 đoạn phản biện (200-300 từ), phải bao gồm:
-
 - Ít nhất 2 lý do kỹ thuật (SEO, Accessibility)
 - 1 ví dụ cụ thể chứng minh semantic HTML giúp ích
 - 1 trường hợp thực tế mà ```<div>``` vẫn phù hợp

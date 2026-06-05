@@ -1,0 +1,19 @@
+* { color: gray; }
+
+p { color: silver; }
+
+.text { color: blue; }
+
+p.text { color: green; }
+
+.text.highlight { color: orange; }
+
+p.text.highlight { color: brown; }
+
+#demo { color: purple; }
+
+p#demo { color: pink; }
+
+#demo.text { color: red; }
+
+p#demo.text.highlight { color: darkblue; }

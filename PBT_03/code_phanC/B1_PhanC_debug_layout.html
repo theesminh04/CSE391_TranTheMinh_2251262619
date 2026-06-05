@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug Layout CSS</title>
+    <link rel="stylesheet" href="debug_layout.css">
+</head>
+<body>
+    <h1>Demo Debug Layout CSS</h1>
+
+    <h2>Cách 1: Sử dụng box-sizing: border-box</h2>
+    <!-- Container 1 -->
+    <div class="container">
+        <div class="sidebar border-box-fix">
+            Sidebar (Cách 1)
+        </div>
+        <div class="content border-box-fix">
+            Content (Cách 1)
+        </div>
+    </div>
+
+    <h2>Cách 2: Tính lại chiều rộng thủ công (không dùng border-box)</h2>
+    <!-- Container 2 -->
+    <div class="container">
+        <div class="sidebar calc-width-fix">
+            Sidebar (Cách 2)
+        </div>
+        <div class="content calc-width-fix">
+            Content (Cách 2)
+        </div>
+    </div>
+
+</body>
+</html>

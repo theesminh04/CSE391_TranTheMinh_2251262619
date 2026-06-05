@@ -1,0 +1,52 @@
+body { font-size: 16px; color: #333; }
+
+.container { font-size: 14px; }
+
+.card { color: blue; }
+
+.card .title { font-size: 20px; }
+
+.card p { color: inherit; }
+
+#featured .title { color: red; }
+
+.highlight { color: green !important; }
+
+/* CSS phụ để dễ nhìn khi chụp screenshot - không đổi font-size/color của các phần tử cần kiểm tra */
+.demo-wrapper {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+.demo-wrapper h1,
+.demo-wrapper h3 {
+    margin-top: 0;
+}
+
+.card {
+    padding: 16px;
+    margin: 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+}
+
+.note-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #222;
+}
+
+.note-table th,
+.note-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}

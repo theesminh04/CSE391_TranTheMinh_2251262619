@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+.container {
+    width: 960px;
+    margin: 0 auto 40px;
+    background-color: #f1f1f1; 
+    overflow: hidden; 
+}
+.sidebar {
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+    background-color: #ffcccc; 
+}
+.content {
+    padding: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    background-color: #ccffcc; 
+}
+/* =========================================
+   CÁCH 1: Dùng box-sizing: border-box 
+   ========================================= */
+.sidebar.border-box-fix {
+    width: 300px;
+    box-sizing: border-box; 
+}
+.content.border-box-fix {
+    width: 660px;
+    box-sizing: border-box; 
+}
+/* =========================================
+   CÁCH 2: Tính toán thủ công (không dùng border-box)
+   ========================================= */
+.sidebar.calc-width-fix {
+    /* (300px - 40px padding - 2px border) */
+    width: 258px; 
+}
+.content.calc-width-fix {
+    /* (660px - 60px padding - 2px border) */
+    width: 598px; 
+}

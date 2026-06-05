@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm chứng CSS Cascade + Inheritance</title>
+    <link rel="stylesheet" href="B2_Phanc_test.css">
+</head>
+<body>
+    <main class="demo-wrapper">
+        <h1>Kiểm chứng CSS Cascade + Inheritance</h1>
+        <p>Khối bên dưới dùng đúng HTML được đề bài đưa ra. Màu và cỡ chữ thể hiện kết quả cascade/inheritance.</p>
+
+        <div class="container">
+            <div class="card" id="featured">
+                <h2 class="title highlight">Sản phẩm A</h2>
+                <p>Mô tả sản phẩm</p>
+            </div>
+            <div class="card">
+                <h2 class="title">Sản phẩm B</h2>
+                <p class="highlight">Mô tả sản phẩm B</p>
+            </div>
+        </div>
+
+        <h3>Bảng kết quả cần thấy</h3>
+        <table class="note-table">
+            <thead>
+                <tr>
+                    <th>Phần tử</th>
+                    <th>font-size</th>
+                    <th>color</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>“Sản phẩm A” - h2.title.highlight trong #featured</td>
+                    <td>20px</td>
+                    <td>green</td>
+                </tr>
+                <tr>
+                    <td>“Mô tả sản phẩm” - p trong #featured.card</td>
+                    <td>Kế thừa 14px từ .container</td>
+                    <td>blue</td>
+                </tr>
+                <tr>
+                    <td>“Sản phẩm B” - h2.title</td>
+                    <td>20px</td>
+                    <td>blue</td>
+                </tr>
+                <tr>
+                    <td>“Mô tả sản phẩm B” - p.highlight</td>
+                    <td>Kế thừa 14px từ .container</td>
+                    <td>green</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

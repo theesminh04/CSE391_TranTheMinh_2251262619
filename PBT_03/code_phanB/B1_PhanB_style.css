@@ -1,0 +1,114 @@
+/* 1. Dòng đầu tiên theo yêu cầu */
+* { 
+    box-sizing: border-box; 
+}
+
+/* 2. Body: font, màu nền, màu chữ, line-height */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f4f7f6; 
+    color: #333; 
+    line-height: 1.6; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 0;
+}
+
+/* 3. Header: background gradient, chữ trắng, padding */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+}
+
+/* 4. Navigation links */
+nav a { 
+    margin: 0 10px; 
+    text-decoration: none; /* Mặc định: không gạch chân */
+    color: #d1d1d1; /* Màu cụ thể */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover: đổi màu + gạch chân */
+nav a:hover { 
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Link đang active (class .active) */
+nav a.active { 
+    color: #ffd700; /* Màu vàng nổi bật */
+    border-bottom: 2px solid #ffd700;
+}
+
+/* Section styling */
+main {
+    padding: 20px;
+    background: #fff;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Hình ảnh trong Figure */
+figure {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: inline-block;
+}
+
+/* 5. Table kỹ năng */
+table { 
+    width: 100%; 
+    border-collapse: collapse; /* Yêu cầu kỹ thuật */
+    margin-top: 15px;
+}
+
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 12px; 
+    text-align: left; 
+}
+
+/* Header row: background đậm, text trắng */
+thead th { 
+    background-color: #2c3e50; 
+    color: white; 
+    text-transform: uppercase;
+}
+
+/* Zebra striping: dùng nth-child(even) */
+tbody tr:nth-child(even) { 
+    background-color: #f2f2f2; 
+}
+
+/* Hover row: đổi background */
+tbody tr:hover { 
+    background-color: #d1ecf1; 
+}
+
+/* Aside section */
+#lien-he { 
+    background: #e9ecef; 
+    padding: 20px; 
+    border-left: 5px solid #2a5298;
+    margin: 20px;
+}
+
+/* 6. Footer: background đậm, text nhạt, căn giữa */
+footer { 
+    background-color: #222; 
+    color: #bbb; 
+    text-align: center; 
+    padding: 15px;
+    margin-top: 20px;
+}
+

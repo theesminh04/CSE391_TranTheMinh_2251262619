@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Focus management */
+button:focus-visible,
+input:focus-visible {
+    outline: 4px solid #ffcc00;
+    outline-offset: 4px;
+}
+
+.app {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.app-header p {
+    margin: 6px 0 0;
+    color: #666;
+}
+
+.command-btn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 18px;
+    background: #222;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+}
+
+.shortcut-panel,
+.gallery {
+    background: white;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.shortcut-panel h2 {
+    margin-top: 0;
+}
+
+.shortcut-panel ul {
+    padding-left: 20px;
+    line-height: 1.9;
+}
+
+kbd {
+    background: #222;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.gallery-top {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    gap: 14px;
+    align-items: center;
+}
+
+.nav-btn {
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #667eea;
+    color: white;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background: #5568d8;
+    transform: scale(1.06);
+}
+
+.image-button {
+    padding: 0;
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.image-button img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+}
+
+.image-info {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.image-info h2 {
+    margin: 0 0 8px;
+}
+
+.image-info p {
+    margin: 6px 0;
+    color: #666;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 18px 0;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 18px;
+    background: #222;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.controls button:hover {
+    background: #444;
+}
+
+.thumbnail-list {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 8px;
+}
+
+.thumbnail-btn {
+    border: 3px solid transparent;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: transparent;
+    transition: 0.2s;
+}
+
+.thumbnail-btn.active {
+    border-color: #667eea;
+}
+
+.thumbnail-btn img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Modal */
+.modal-overlay,
+.palette-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    z-index: 100;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    animation: popup 0.22s ease;
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #ff4757;
+    color: white;
+    font-size: 26px;
+}
+
+.modal img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.modal h2 {
+    margin-bottom: 8px;
+}
+
+.modal p {
+    color: #666;
+}
+
+/* Command Palette */
+.palette {
+    width: 100%;
+    max-width: 560px;
+    background: #1f2430;
+    color: white;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    animation: popup 0.22s ease;
+}
+
+.palette h2 {
+    margin: 0 0 14px;
+}
+
+#commandInput {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #3a4155;
+    border-radius: 12px;
+    background: #111520;
+    color: white;
+    font-size: 16px;
+}
+
+.command-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.command-item {
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #d8d8d8;
+}
+
+.command-item.active {
+    background: #667eea;
+    color: white;
+}
+
+.command-empty {
+    padding: 12px 14px;
+    color: #aaa;
+}
+
+@media (max-width: 850px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .app-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .gallery-top {
+        grid-template-columns: 48px 1fr 48px;
+    }
+
+    .nav-btn {
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .image-button img {
+        height: 260px;
+    }
+
+    .thumbnail-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

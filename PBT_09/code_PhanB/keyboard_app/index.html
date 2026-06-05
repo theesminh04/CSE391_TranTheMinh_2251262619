@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <div>
+                <h1>Keyboard Gallery App</h1>
+                <p>Điều hướng bằng bàn phím + Accessibility</p>
+            </div>
+
+            <button 
+                id="openCommandPaletteBtn" 
+                class="command-btn" 
+                type="button"
+                aria-label="Mở command palette bằng Ctrl K"
+            >
+                Ctrl + K
+            </button>
+        </header>
+
+        <main>
+            <section class="shortcut-panel" aria-label="Danh sách phím tắt">
+                <h2>Keyboard Shortcuts</h2>
+                <ul>
+                    <li><kbd>←</kbd> / <kbd>→</kbd>: Chuyển ảnh</li>
+                    <li><kbd>1</kbd> - <kbd>9</kbd>: Nhảy đến ảnh tương ứng</li>
+                    <li><kbd>Space</kbd>: Play / Pause slideshow</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>K</kbd>: Mở Command Palette</li>
+                    <li><kbd>Escape</kbd>: Đóng modal hoặc command palette</li>
+                </ul>
+            </section>
+
+            <section class="gallery" aria-label="Gallery ảnh">
+                <div class="gallery-top">
+                    <button 
+                        id="prevBtn" 
+                        class="nav-btn" 
+                        type="button"
+                        aria-label="Chuyển sang ảnh trước"
+                    >
+                        ←
+                    </button>
+
+                    <button 
+                        id="imageButton" 
+                        class="image-button" 
+                        type="button"
+                        aria-label="Mở ảnh hiện tại trong modal"
+                    >
+                        <img id="currentImage" src="" alt="">
+                    </button>
+
+                    <button 
+                        id="nextBtn" 
+                        class="nav-btn" 
+                        type="button"
+                        aria-label="Chuyển sang ảnh tiếp theo"
+                    >
+                        →
+                    </button>
+                </div>
+
+                <div class="image-info">
+                    <h2 id="imageTitle"></h2>
+                    <p id="imageDescription"></p>
+                    <p id="imageCounter"></p>
+                </div>
+
+                <div class="controls">
+                    <button 
+                        id="playPauseBtn" 
+                        type="button"
+                        aria-label="Play hoặc pause slideshow"
+                    >
+                        Play slideshow
+                    </button>
+
+                    <button 
+                        id="openModalBtn" 
+                        type="button"
+                        aria-label="Mở ảnh hiện tại ở chế độ modal"
+                    >
+                        Open modal
+                    </button>
+                </div>
+
+                <div id="thumbnailList" class="thumbnail-list" aria-label="Danh sách ảnh nhỏ"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal xem ảnh -->
+    <div 
+        id="imageModal" 
+        class="modal-overlay hidden" 
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="modalTitle"
+    >
+        <div class="modal">
+            <button 
+                id="closeModalBtn" 
+                class="close-btn" 
+                type="button"
+                aria-label="Đóng modal ảnh"
+            >
+                ×
+            </button>
+
+            <img id="modalImage" src="" alt="">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <!-- Command Palette -->
+    <div 
+        id="commandPalette" 
+        class="palette-overlay hidden" 
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="paletteTitle"
+    >
+        <div class="palette">
+            <h2 id="paletteTitle">Command Palette</h2>
+
+            <input 
+                id="commandInput" 
+                type="text" 
+                placeholder="Gõ command..."
+                aria-label="Nhập từ khóa tìm kiếm command"
+            >
+
+            <ul 
+                id="commandList" 
+                class="command-list" 
+                role="listbox"
+                aria-label="Danh sách command"
+            ></ul>
+        </div>
+    </div>
+</body>
+</html>

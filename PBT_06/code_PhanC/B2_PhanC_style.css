@@ -1,0 +1,29 @@
+.pure-navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem; background-color: #f8f9fa; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-links {
+  display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;
+}
+.nav-links a { text-decoration: none; color: #333; }
+.hamburger { display: none; cursor: pointer; font-size: 1.5rem; }
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+}
+
+.pure-card {
+  width: 300px; border: 1px solid #ddd; border-radius: 8px;
+  overflow: hidden; font-family: sans-serif;
+}
+.card-img { width: 100%; height: 200px; object-fit: cover; }
+.card-body { padding: 15px; display: flex; flex-direction: column; gap: 10px; }
+.card-title { margin: 0; font-size: 1.2rem; }
+.card-price { color: #E63946; font-weight: bold; margin: 0; }
+.card-btn {
+  background-color: #0d6efd; color: white; border: none;
+  padding: 10px; border-radius: 4px; cursor: pointer;
+}
+.card-btn:hover { background-color: #0b5ed7; }

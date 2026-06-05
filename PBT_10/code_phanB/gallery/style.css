@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6fb;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    padding: 30px 16px;
+    background: #2d3436;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+    color: #dfe6e9;
+}
+
+main {
+    width: 92%;
+    max-width: 1200px;
+    margin: 24px auto;
+}
+
+/* Desktop: 4 cột */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.photo-card:hover {
+    transform: translateY(-4px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background: #ddd;
+}
+
+.photo-info {
+    padding: 10px;
+}
+
+.photo-info h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.photo-info p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Loading */
+.loading {
+    text-align: center;
+    margin: 30px 0;
+    color: #333;
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 4px solid #ddd;
+    border-top: 4px solid #2d3436;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    background: #ff7675;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#load-trigger {
+    height: 40px;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.lightbox p {
+    color: white;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 40px;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+/* Tablet: 2 cột */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 cột */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 240px;
+    }
+}

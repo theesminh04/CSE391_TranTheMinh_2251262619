@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Page</title>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">BitedAppleStore</div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav class="nav" id="navMenu">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Khuyến mãi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        
+        <aside class="sidebar">
+            <h3>Bộ Lọc</h3>
+            <div class="filter-group">
+                <label for="category">Danh mục:</label>
+                <select id="category">
+                    <option>Tất cả</option>
+                    <option>Điện thoại</option>
+                    <option>Laptop</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price">Mức giá:</label>
+                <select id="price">
+                    <option>Mọi mức giá</option>
+                    <option>Dưới 10 triệu</option>
+                    <option>Trên 10 triệu</option>
+                </select>
+            </div>
+        </aside>
+
+        <section class="product-grid">
+            <article class="card">
+                <img src="https://i1-e.pinimg.com/736x/61/43/7e/61437e16ea05c75b79d8b91cbd009e35.jpg" alt="Product 1">
+                <div class="card-body">
+                    <h4>iPhone 8 plus</h4>
+                    <p class="price">2,000,000 đ</p>
+                    <button class="btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://i1-e.pinimg.com/1200x/bf/bf/01/bfbf01cd75fcf3c3cec7406284302994.jpg" alt="Product 2">
+                <div class="card-body">
+                    <h4>iPhone XS</h4>
+                    <p class="price">3,200,000 đ</p>
+                    <button class="btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://i.pinimg.com/736x/81/5c/3c/815c3ce0a0b0cdc9aa1d40aa2676371e.jpg" alt="Product 3">
+                <div class="card-body">
+                    <h4>iPhone 11 ProMax</h4>
+                    <p class="price">5,500,000 đ</p>
+                    <button class="btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://i1-e.pinimg.com/1200x/a1/a6/d7/a1a6d77b15d527a100251bd39bf00783.jpg" alt="Product 4">
+                <div class="card-body">
+                    <h4>iPhone 12 ProMax</h4>
+                    <p class="price">8,000,000 đ</p>
+                    <button class="btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://i1-e.pinimg.com/1200x/48/50/67/485067d9570ba3f9a3cfd9c80dd38924.jpg" alt="Product 5">
+                <div class="card-body">
+                    <h4>iPhone 13 ProMax</h4>
+                    <p class="price">11,000,000 đ</p>
+                    <button class="btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://i1-e.pinimg.com/736x/64/d2/15/64d2150e8ac30b0ed9ebf705a5ddad74.jpg" alt="Product 6">
+                <div class="card-body">
+                    <h4>iPhone 14 ProMax</h4>
+                    <p class="price">14,000,000 đ</p>
+                    <button class="btn">Thêm vào giỏ</button>
+                </div>
+                
+            </article>
+            <article class="card">
+                <img src="https://i.pinimg.com/736x/a8/4e/2e/a84e2e0fda8f0df024deda866193d266.jpg" alt="Product 7">
+                <div class="card-body">
+                    <h4>iPhone 15 ProMax</h4>
+                    <p class="price">17,000,000 đ</p>
+                    <button class="btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://i1-e.pinimg.com/736x/72/48/b4/7248b4900760f89f63d92877834fe9bd.jpg" alt="Product 8">
+                <div class="card-body">
+                    <h4>iPhone 16 ProMax</h4>
+                    <p class="price">22,000,000 đ</p>
+                    <button class="btn">Thêm vào giỏ</button>
+                </div>
+            </article>
+        </section>
+
+        <aside class="ads-bar">
+            <div class="ad-banner">
+                <p>Quảng cáo 1</p>
+            </div>
+            <div class="ad-banner">
+                <p>Quảng cáo 2</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 MyStore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

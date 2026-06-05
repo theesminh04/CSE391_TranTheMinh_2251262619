@@ -1,0 +1,245 @@
+@import "variables";
+@import "mixins";
+
+.header {
+    background-color: $bg-white;
+    padding: $spacing-md ($spacing-md * 1.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+    z-index: 100;
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    .menu-toggle {
+        display: none;
+        
+        &:checked ~ .nav {
+            display: block;
+        }
+    }
+
+    .hamburger {
+        font-size: 1.8rem;
+        cursor: pointer;
+        display: block;
+        user-select: none;
+
+        @include respond-to(tablet) {
+            display: none; 
+        }
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $bg-white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+        @include respond-to(tablet) {
+            display: block;
+            position: static;
+            width: auto;
+            box-shadow: none;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+
+            @include respond-to(tablet) {
+                flex-direction: row;
+                gap: $spacing-md * 1.5;
+            }
+        }
+
+        li {
+            a {
+                display: block;
+                padding: $spacing-md ($spacing-md * 1.5);
+                text-decoration: none;
+                color: $text-dark;
+                border-top: 1px solid $border-color;
+
+                @include respond-to(tablet) {
+                    border-top: none;
+                    padding: 0;
+                }
+
+                &:hover {
+                    background-color: #f9fafb;
+                    color: $primary-color;
+                    
+                    @include respond-to(tablet) {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    display: none; 
+
+    @include respond-to(tablet) {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $spacing-md * 1.5;
+        background-color: $bg-white;
+        padding: $spacing-md * 1.5;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    @include respond-to(desktop) {
+        flex-direction: column;
+        align-items: flex-start;
+        position: sticky;
+        top: $spacing-lg;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        @include respond-to(desktop) {
+            margin-bottom: $spacing-md;
+        }
+    }
+
+    .filter-dropdown {
+        padding: $spacing-sm;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        outline: none;
+
+        @include respond-to(desktop) {
+            width: 100%;
+            margin-bottom: $spacing-md;
+        }
+    }
+
+    .filter-list {
+        display: flex;
+        gap: $spacing-md;
+
+        @include respond-to(desktop) {
+            flex-direction: column;
+            gap: $spacing-sm * 1.1;
+            width: 100%;
+            margin-bottom: $spacing-md;
+        }
+
+        label {
+            display: block;
+            cursor: pointer;
+            font-size: 0.95rem;
+
+            input[type="checkbox"] {
+                margin-right: $spacing-sm;
+            }
+        }
+    }
+}
+
+.product-card {
+    background-color: $bg-white;
+    border-radius: 8px;
+    overflow: hidden;
+    @include card-shadow; 
+
+    &.featured {
+        border: 2px solid $primary-color;
+        position: relative;
+        
+        &::before {
+            content: "BÁN CHẠY";
+            position: absolute;
+            top: $spacing-sm;
+            left: $spacing-sm;
+            background-color: $secondary-color;
+            color: $bg-white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px $spacing-sm;
+            border-radius: 4px;
+            z-index: 10;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .card-info {
+        padding: $spacing-md;
+        text-align: center;
+
+        h4 {
+            margin-bottom: $spacing-sm;
+            font-size: 1.1rem;
+            color: $text-dark;
+        }
+
+        .price {
+            color: $secondary-color;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: $spacing-md;
+        }
+
+        .btn-buy {
+            background-color: $primary-color;
+            color: $bg-white;
+            border: none;
+            padding: $spacing-sm $spacing-md;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.2s;
+
+            &:hover {
+                background-color: darkene($primary-color, 10%);
+            }
+        }
+    }
+}
+
+.ads-bar {
+    display: none; 
+
+    @include respond-to(desktop) {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md * 1.5;
+        position: sticky;
+        top: $spacing-lg;
+    }
+
+    .ad-banner {
+        background-color: #d1d5db;
+        border-radius: 8px;
+        height: 250px;
+        color: #4b5563;
+        font-weight: bold;
+        padding: $spacing-md;
+        @include flex-center; 
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <form id="registerForm" class="form-card">
+            <h1>Dang ky tai khoan</h1>
+            <p class="subtitle">Xac thuc bieu mau thoi gian thuc bang Javascript</p>
+
+            <div class="form-group">
+                <label for="name">Ten</label>
+                <div class="input-wrapper">
+                    <input id="name" type="text" placeholder="Nhập tên của bạn">
+                    <span id="nameStatus" class="status-icon"></span>
+                </div>
+                <small id="nameError" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="text" placeholder="example@gmail.com">
+                <small id="emailError" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mat khau</label>
+                <input id="password" type="password" placeholder="Nhập mật khẩu">
+                
+                <div class="strength-box">
+                    <div id="strengthBar" class="strength-bar"></div>
+                </div>
+
+                <small id="passwordMessage" class="password-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Xac nhan mat khau</label>
+                <input id="confirmPassword" type="password" placeholder="Nhập lại mật khẩu">
+                <small id="confirmError" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">So dien thoai</label>
+                <input id="phone" type="text" placeholder="0901-234-567" maxlength="12">
+                <small id="phoneError" class="error-message"></small>
+            </div>
+
+            <button id="submitBtn" type="submit" disabled>Dang ky</button>
+        </form>
+    </div>
+
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal">
+            <button id="closeModal" class="close-modal" type="button">×</button>
+            <h2>Dang ky thanh cong!</h2>
+            <div id="modalContent" class="modal-content"></div>
+        </div>
+    </div>
+</body>
+</html>

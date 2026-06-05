@@ -19,7 +19,7 @@
 | PBT_06        | Bootstrap / TailwindCSSBootstrap / TailwindCSSv      | Hoàn thành |
 | PBT_07        | Variables, Data Types, Control Structures       | Hoàn thành |
 | PBT_08        | Functions, Scope, Arrays, Objects       | Hoàn thành |
-| PBT_09        | DOM Manipulation, Events       | Chưa hoàn thành |
+| PBT_09        | DOM Manipulation, Events       | Hoàn thành |
 | PBT_10        | Async/Await, Fetch API, CRUDv       | Chưa hoàn thành |
 
 

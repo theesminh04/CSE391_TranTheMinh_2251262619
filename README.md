@@ -16,7 +16,7 @@
 | PBT_03 | Selectors, Box Model, Inheritance, Cascade | Hoàn thành |
 | PBT_04        | Positioning, Flexbox, Grid      | Hoàn thành |
 | PBT_05 | Responsive Design, Media Queries, SCSS | Hoàn thành |
-| PBT_06        | Bootstrap / TailwindCSSBootstrap / TailwindCSSv      | Chưa hoàn thành |
+| PBT_06        | Bootstrap / TailwindCSSBootstrap / TailwindCSSv      | Hoàn thành |
 | PBT_07        | Variables, Data Types, Control Structures       | Chưa hoàn thành |
 | PBT_08        | Functions, Scope, Arrays, Objects       | Chưa hoàn thành |
 | PBT_09        | DOM Manipulation, Events       | Chưa hoàn thành |
